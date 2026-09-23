@@ -1,0 +1,349 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{KONDAM MANIDEEP REDDY} % Your Name
+\newcommand{\course}{Computer Science and Engineering} % Your Program
+\newcommand{\roll}{2620235} % Your Roll No.
+\newcommand{\phone}{9989922030} % Your Phone Number
+\newcommand{\emaila}{kmanideepreddy2002@gmail.com} %Email 1
+\newcommand{\emailb}{kmanideepreddy.262is019@nitk.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{nitk_logo.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.:\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Information Security (IS)} & \href{https://www.linkedin.com/in/k-manideep-r-654000245}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ linkedin.com/in/k-manideep-r-654000245}   \\
+  {National Institute of Technology, Karnataka} 
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+\vspace{-1mm}
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {{Master Of Technology, Computer Science and Engineering (Information Security) }}{CGPA: 0}
+      { National Institute of Technology, Surathkal, Karnataka}{}
+    \resumeSubheading
+      {{Bachelor of Technology, Computer Science and Engineering}}{CGPA: 8.15}
+      { CMR Institute of Technology}{2024}
+    \resumeSubheading
+      { Sri Gayatri Junior College, Karimnagar, Telangana}{Percentage: 97.2}
+      {Intermediate Board(TSBIE)}{2020}
+    \resumeSubheading
+      { Bhagavathi High School, Karimnagar, Telangana}{CGPA: 9.8}
+      {SSC Board(TSBSC)}{2018}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Hate Speech Detection using Sentiment and Emotional Analysis} %Project Name
+      {This project was implemented as my Major Project for my Bachelor's Degree} %Project Name, Location Name
+      {Dec 2023 - Mar 2024} %Event Dates
+
+      \resumeItemListStart
+          \vspace{0.7mm}
+
+    \begin{itemize}
+     \item{Developed a framework for detecting hate speech in social-media posts/comments using sentiment and emotion analysis}
+     \item{Applied Machine Learning, NLP, and K-Means clustering to identify negative/hate-promoting topics from unstructured text}
+     \item{Evaluated model performance using Precision, Recall, and F1-score, achieving 54\%, 61\%, and 49\%, respectively}
+     % \item{Points..}
+ \end{itemize}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {A Deep Learning Approach for Bottleneck Detection in IoT} %Project Name
+      {This project was implemented as my Minor Project for my Bachelor's Degree} %Project Name, Location Name
+      {Jun 2023 - Sep 2023} %Event Dates
+
+      \resumeItemListStart
+      \vspace{0.7mm}
+        \begin{itemize}
+       \item{Developed a deep learning-based approach for detecting botnet attacks in IoT networks}
+     \item{Applied DNN and LSTM algorithms to identify malicious network behavior and improve botnet detection accuracy}
+     \item{Evaluated model performance to enhance the accuracy and reliability of IoT botnet detection}
+     % \item{Points..}
+       \end{itemize}
+    \resumeItemListEnd
+    \vspace{-2mm}
+%   \resumeProject
+%       { Monte Carlo Simulation to determine the performance of
+% (7,3) Linear Block Code} %Project Name
+%       {This is a term-project for our subject Linear Algebra and Stochastic Process in our second semester of Masters.} %Project Name, Location Name
+%       {} %Event Dates
+
+%       \resumeItemListStart
+%         \item {Linear Block codes are effective way of reducing bit error rate/Improving the SNR (Signal to
+% noise ratio) over a noisy channel (white Noise). Linear block codes are defined in terms of
+% generator and parity-check matrices and syndrome vectors are used for error detection.}
+ 
+%     \resumeItemListEnd
+%     \vspace{-2mm}
+
+    % \resumeProject
+    %   { Earlier Project} %Project Name
+    %   {The project was implemented on MATLAB as UG Major Project } %Project Name, Location Name
+    %   {} %Event Dates
+
+    %   \resumeItemListStart
+    %   \begin{itemize} 
+    %         \item{Points..}
+    %  \item{Points..}
+
+    %   \end{itemize} 
+    % \resumeItemListEnd
+    \vspace{-2mm}
+
+
+
+
+
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%-----------Technical skills-----------------
+
+% \section{\textbf{Technical Skills}}
+% \vspace{1mm}
+% \begin{itemize}[leftmargin=0.05in, label={}]
+%     \small{\item{
+%         \textbf{Languages}{: 
+%         \begin{itemize}
+%             \item C Programming
+%             \item Python
+%             \item MATLAB Programming
+%         \end{itemize}
+%         } 
+%         \textbf{Skills}{:
+%             \begin{itemize}
+%                 \item Machine Learning and Deep Learning Concepts, with hands-on experience in ML frameworks such as PyTorch and TensorFlow
+%                 \item Data Structures and Algorithms
+%                 \item Object-Oriented Programming
+%                 \item Image and Speech Signal Processing
+%             \end{itemize}
+%         } 
+%         \textbf{Operating Systems}{: 
+%         \begin{itemize}
+%             \item Windows
+%             \item Ubuntu
+%         \end{itemize}
+%         } 
+%     }}
+% \end{itemize}
+\section{\textbf{Technical Skills}}
+\vspace{1mm}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small
+    \item{
+        \parbox[t]{0.4\textwidth}{
+            \textbf{Languages}{: 
+            \begin{itemize}[label=\textasteriskcentered]
+                \item Python
+                \item C Programming
+                \item C++ Programming
+            \end{itemize}
+            }
+             \textbf{Operating Systems}{: 
+            \begin{itemize}[label=\textasteriskcentered]
+                \item Windows
+                \item Ubuntu
+            \end{itemize}
+            }
+        }
+        \parbox[t]{0.55\textwidth}{
+            \textbf{Skills}{:
+                \begin{itemize}[label=\textasteriskcentered]
+                    \item Data Structures and Algorithms
+                    \item Object-Oriented Programming
+                    \item Machine Learning and Deep Learning Concepts
+                    % \item Skills..
+                    % \item Skills..
+                \end{itemize}
+            }
+        }
+        % \parbox[t]{0.4\textwidth}{
+        %     \textbf{Operating Systems}{: 
+        %     \begin{itemize}[label=\textasteriskcentered]
+        %         \item Windows
+        %         \item Ubuntu
+        %     \end{itemize}
+        %     }
+        }
+    
+\end{itemize}
+
+
+%-----------Areas Of Interest-----------------
+\section{\textbf{Areas of Interest \hspace{3cm} Certifications}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+        \begin{minipage}[t]{0.4\textwidth}
+            % \textbf{Areas Of Interest}{: 
+            \begin{itemize}[label=\textasteriskcentered]
+                \item {Computer Networks}
+                \item {Operating System}
+            \end{itemize}
+            % }
+        \end{minipage}
+        \begin{minipage}[t]{0.55\textwidth}
+            % \textbf{Certifications}{:
+                \begin{itemize}[label=\textasteriskcentered]
+                    \item AWS Academy Cloud Foundations \\
+                          By AWS Academy
+                    \item Database Management System \\
+                          By Infosys
+                \end{itemize}
+            % }
+        \end{minipage}
+        }}
+\end{itemize}
+\end{document}
